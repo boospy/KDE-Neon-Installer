@@ -76,7 +76,7 @@ apt install choqok steam-installer lm-sensors nvme-cli -y
 #apt install libnvidia-gl-440:i386
 
 # Multimediapackages
-apt install openshot mkvtoolnix-gui makemkv-bin kdenlive
+apt install openshot mkvtoolnix-gui makemkv-bin kdenlive -y
 
 # Teamviewer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
