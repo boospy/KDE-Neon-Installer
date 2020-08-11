@@ -39,13 +39,13 @@ cp /usr/share/doc/avahi-daemon/examples/s* /etc/avahi/services/.
 systemctl restart avahi-daemon.service
 
 # ITEAS Mitarbeiter 
-#apt install nload openfortigui openfortigui-runner virt-viewer pwgen konversation ldap-utils speedtest-cli x2goclient filezilla filezilla-theme-papirus nmapsi4 proxmox-spice-remoteviewer realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de qfinderpro preload krename kopano-deskapp kopano-deskapp-kdeintegration linphone4 kompare wireshark master-pdf-editor kdenetwork-filesharing gtkterm samba librecad xca libpam-mount davfs2 keyutils -y
+apt install nload openfortigui openfortigui-runner virt-viewer pwgen konversation ldap-utils speedtest-cli x2goclient filezilla filezilla-theme-papirus nmapsi4 proxmox-spice-remoteviewer realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de qfinderpro preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark master-pdf-editor kdenetwork-filesharing gtkterm samba librecad xca libpam-mount davfs2 keyutils -y
 
 # User Profile
 #cd /root && git clone -b iteas_mitarbeiter https://git.styrion.net/iteas/KDE_Plasma5_Default_Profile.git && rm -r /etc/skel && mv KDE_Plasma5_Default_Profile /etc/skel && rm -r /etc/skel/.git
 
 # ITEAS Developer Packages
-apt install okteta manpages-de-dev pycharm-community mysql-workbench php-mbstring composer
+apt install okteta manpages-de-dev pycharm-community php-mbstring composer dbeaver -y
 
 # ZSH und Bash Configs 
 # https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs
@@ -67,10 +67,10 @@ rm /tmp/nano.tar -f
 
 
 # optional - komplette Kommunikationssuite Kontact, inkl. alle Plugins und Erweiterungen
-apt install kde-pim
+apt install kde-pim -y
 
 # Advanced Packages
-apt install choqok steam-installer lm-sensors nvme-cli -y
+apt install choqok lm-sensors nvme-cli -y
 
 # Steam Abhängigkeit für NVIDIA
 #apt install libnvidia-gl-440:i386
