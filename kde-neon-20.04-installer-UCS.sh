@@ -17,10 +17,13 @@ apt update
 apt remove kwrite snapd flatpak plasma-discover-backend-flatpak plasma-discover-backend-snap --purge -y
 apt autoremove --purge -y
 
-apt install zsh ssh htop tree git kate k3b k3b-extrathemes kdf dolphin-nextcloud zsh nfs-common synaptic aspell-de hunspell-de-at mpv ca-certificates-iteas-enterprise gnupg-agent libreoffice-kf5 libreoffice-help-de libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-l10n-de libreoffice-plasma libreoffice-writer libreoffice-templates libreoffice-qt5 krdc kleopatra gnome-icon-theme mlocate kdepim-addons qt5-style-kvantum-themes materia-kde yakuake papirus-folders digikam akonadi-backend-sqlite korganizer showfoto kipi-plugins kde-config-cron dolphin-plugins qreator filelight kcolorchooser soundkonverter kcalc partitionmanager kronometer kfind strawberry audacity unp plasma-theme-oxygen kubuntu-restricted-extras katomic avahi-discover simplescreenrecorder keepassxc avahi-utils tellico rocketchat rambox kio-stash kde-service-menu-fuseiso -y
+apt install zsh ssh htop tree git kate k3b k3b-extrathemes kdf dolphin-nextcloud zsh nfs-common synaptic aspell-de hunspell-de-at mpv ca-certificates-iteas-enterprise gnupg-agent libreoffice-kf5 libreoffice-help-de libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-l10n-de libreoffice-plasma libreoffice-writer libreoffice-templates libreoffice-qt5 krdc kleopatra gnome-icon-theme mlocate kdepim-addons qt5-style-kvantum-themes materia-kde yakuake papirus-folders digikam akonadi-backend-sqlite korganizer showfoto kipi-plugins kde-config-cron dolphin-plugins qreator filelight kcolorchooser soundkonverter kcalc partitionmanager kronometer kfind strawberry audacity unp plasma-theme-oxygen kubuntu-restricted-extras katomic avahi-discover simplescreenrecorder keepassxc avahi-utils tellico rocketchat hamsket kio-stash -y
 
 ubuntu-drivers autoinstall
 
+# Google Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb
 
 # Anpassen der viel zu niedrigen Werte in Sysctl
 echo    "fs.file-max = 9223372036854775807" > /etc/sysctl.d/10-mindguide.conf
@@ -39,13 +42,13 @@ cp /usr/share/doc/avahi-daemon/examples/s* /etc/avahi/services/.
 systemctl restart avahi-daemon.service
 
 # ITEAS Mitarbeiter 
-apt install nload openfortigui openfortigui-runner virt-viewer pwgen konversation ldap-utils speedtest-cli x2goclient filezilla filezilla-theme-papirus nmapsi4 proxmox-spice-remoteviewer realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de qfinderpro preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark master-pdf-editor kdenetwork-filesharing gtkterm samba librecad xca libpam-mount davfs2 keyutils -y
+apt install nload openfortigui openfortigui-runner virt-viewer pwgen konversation ldap-utils speedtest-cli x2goclient filezilla filezilla-theme-papirus nmapsi4 proxmox-spice-remoteviewer realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de qfinderpro preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark master-pdf-editor kdenetwork-filesharing gtkterm samba librecad xca libpam-mount davfs2 keyutils gnome-disk-utility -y
 
 # User Profile
 #cd /root && git clone -b iteas_mitarbeiter https://git.styrion.net/iteas/KDE_Plasma5_Default_Profile.git && rm -r /etc/skel && mv KDE_Plasma5_Default_Profile /etc/skel && rm -r /etc/skel/.git
 
 # ITEAS Developer Packages
-apt install okteta manpages-de-dev pycharm-community php-mbstring composer dbeaver -y
+apt install okteta manpages-de-dev pycharm-community php-mbstring composer dbeaver-ce -y
 
 # ZSH und Bash Configs 
 # https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs
