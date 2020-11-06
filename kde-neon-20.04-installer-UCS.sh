@@ -70,7 +70,7 @@ rm /tmp/nano.tar -f
 
 
 # optional - komplette Kommunikationssuite Kontact, inkl. alle Plugins und Erweiterungen
-apt install kde-pim -y
+apt install kdepim -y
 
 # Advanced Packages
 apt install choqok lm-sensors nvme-cli -y
