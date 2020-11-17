@@ -81,6 +81,12 @@ apt install choqok lm-sensors nvme-cli -y
 # Multimediapackages
 apt install openshot mkvtoolnix-gui makemkv-bin kdenlive -y
 
+# Spotify
+# wget -q -O "-" https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+# echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+# apt update
+# apt install spotify-client -y
+
 # Teamviewer
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 dpkg -i teamviewer_amd64.deb && apt install -fy
