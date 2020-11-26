@@ -5,6 +5,11 @@
 # mario@mindguide.cc
 #
 
+# update
+pkcon refresh
+pkcon update -y
+
+
 # Hinzufügen von Repositories
 apt-add-repository ppa:heyarje/makemkv-beta -n -y
 apt-add-repository ppa:papirus/papirus -n -y
@@ -24,6 +29,7 @@ ubuntu-drivers autoinstall
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
+apt install -fy
 
 # Anpassen der viel zu niedrigen Werte in Sysctl
 echo    "fs.file-max = 9223372036854775807" > /etc/sysctl.d/10-mindguide.conf
