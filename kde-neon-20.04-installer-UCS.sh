@@ -22,7 +22,7 @@ apt update
 apt remove kwrite snapd flatpak plasma-discover-backend-flatpak plasma-discover-backend-snap --purge -y
 apt autoremove --purge -y
 
-apt install zsh ssh htop tree git kate k3b k3b-extrathemes kdf dolphin-nextcloud zsh nfs-common synaptic aspell-de hunspell-de-at mpv text2speech-sound-thema ca-certificates-iteas-enterprise gnupg-agent libreoffice-kf5 libreoffice-help-de libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-l10n-de libreoffice-plasma libreoffice-writer libreoffice-templates libreoffice-qt5 kleopatra gnome-icon-theme mlocate kdepim-addons qt5-style-kvantum-themes materia-kde yakuake papirus-folders digikam akonadi-backend-sqlite korganizer showfoto kipi-plugins kde-config-cron dolphin-plugins qreator filelight kcolorchooser soundkonverter kcalc partitionmanager kronometer kfind strawberry audacity unp plasma-theme-oxygen kubuntu-restricted-extras katomic avahi-discover simplescreenrecorder keepassxc avahi-utils tellico rocketchat hamsket kio-stash language-pack-gnome-de -y
+apt install zsh ssh htop tree git kate k3b k3b-extrathemes kdf dolphin-nextcloud zsh nfs-common synaptic aspell-de hunspell-de-at mpv text2speech-sound-thema ca-certificates-iteas-enterprise gnupg-agent libreoffice-kf5 libreoffice-help-de libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-l10n-de libreoffice-plasma libreoffice-writer libreoffice-templates libreoffice-qt5 kleopatra gnome-icon-theme mlocate kdepim-addons qt5-style-kvantum-themes materia-kde yakuake papirus-folders digikam akonadi-backend-sqlite korganizer showfoto kipi-plugins kde-config-cron dolphin-plugins qreator filelight kcolorchooser soundkonverter kcalc partitionmanager kronometer kfind strawberry audacity unp plasma-theme-oxygen kubuntu-restricted-extras katomic avahi-discover simplescreenrecorder keepassxc avahi-utils tellico rocketchat hamsket kio-stash language-pack-gnome-de finger -y
 
 ubuntu-drivers autoinstall
 
@@ -64,15 +64,13 @@ mkdir /usr/share/fonts/truetype/nerdfont && cd /usr/share/fonts/truetype/nerdfon
 wget -O /tmp/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs/raw/master/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf
 mv /tmp/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf /usr/share/fonts/truetype/nerdfont/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf
 fc-cache -fv
-wget -O /root/.zshrc https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs/raw/master/zshrc-root
-wget -O /etc/skel/.zshrc https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs/raw/master/zshrc-user
-wget -O /root/.p10k.zsh https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs/raw/master/p10k.zsh-root
-wget -O /etc/skel/.p10k.zsh https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs/raw/master/p10k.zsh-user
+wget -O /root/.zshrc https://darkdevil.osit.cc/gitlab/public-projects/kde-neon-installer/raw/master/zshrc
+wget -O /etc/skel/.zshrc https://darkdevil.osit.cc/gitlab/public-projects/kde-neon-installer/raw/master/zshrc
 usermod -s /bin/zsh root
-wget -O /tmp/nano.tar https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs/raw/master/nano_syntax_highlighting.tar
-tar -xf /tmp/nano.tar -C /root
-tar -xf /tmp/nano.tar -C /etc/skel
-rm /tmp/nano.tar -f
+#wget -O /tmp/nano.tar https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs/raw/master/nano_syntax_highlighting.tar
+#tar -xf /tmp/nano.tar -C /root
+#tar -xf /tmp/nano.tar -C /etc/skel
+#rm /tmp/nano.tar -f
 
 
 # optional - komplette Kommunikationssuite Kontact, inkl. alle Plugins und Erweiterungen
