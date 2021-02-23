@@ -6,7 +6,7 @@ Das Script installiert nach dem Standard Setup von NEON, ausgesuchte Applikation
 INSTALLATION
 ------------
 
-Folgende Befefehle mit SUDO oder in einer Rootshell ausführen.
+Folgende Befehle mit SUDO oder in einer Rootshell ausführen.
 
 ~~~
 wget https://darkdevil.osit.cc/gitlab/public-projects/kde-neon-installer/raw/master/kde-neon-20.04-installer-UCS.sh
