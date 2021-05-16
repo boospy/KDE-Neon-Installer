@@ -9,7 +9,7 @@ INSTALLATION
 Folgende Befehle mit SUDO oder in einer Rootshell ausführen.
 
 ~~~
-wget https://darkdevil.osit.cc/gitlab/public-projects/kde-neon-installer/raw/master/kde-neon-20.04-installer-UCS.sh
+wget https://git.osit.cc/public-projects/kde-neon-installer/raw/master/kde-neon-20.04-installer-UCS.sh
 chmod +x kde-neon-20.04-installer-UCS.sh
 ./kde-neon-20.04-installer-UCS.sh
 ~~~
