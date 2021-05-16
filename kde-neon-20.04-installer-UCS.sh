@@ -57,20 +57,20 @@ apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom remmina 
 # apt install okteta manpages-de-dev pycharm-community php-mbstring composer dbeaver-ce -y
 
 # ZSH und Bash Configs 
-# https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs
+# https://git.osit.cc/public-projects/zsh-und-bash-configs
 apt update
 apt install zsh git -y
 mkdir /usr/share/fonts/truetype/nerdfont && cd /usr/share/fonts/truetype/nerdfont
-wget -O /tmp/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs/raw/master/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf
+wget -O /tmp/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf https://git.osit.cc/public-projects/zsh-und-bash-configs/raw/master/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf
 mv /tmp/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf /usr/share/fonts/truetype/nerdfont/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf
 fc-cache -fv
-wget -O /root/.zshrc https://darkdevil.osit.cc/gitlab/public-projects/kde-neon-installer/raw/master/zshrc
-wget -O /etc/skel/.zshrc https://darkdevil.osit.cc/gitlab/public-projects/kde-neon-installer/raw/master/zshrc
+wget -O /root/.zshrc https://git.osit.cc/public-projects/kde-neon-installer/raw/master/zshrc
+wget -O /etc/skel/.zshrc https://git.osit.cc/public-projects/kde-neon-installer/raw/master/zshrc
 usermod -s /bin/zsh root
-#wget -O /tmp/nano.tar https://darkdevil.osit.cc/gitlab/public-projects/zsh-und-bash-configs/raw/master/nano_syntax_highlighting.tar
-#tar -xf /tmp/nano.tar -C /root
-#tar -xf /tmp/nano.tar -C /etc/skel
-#rm /tmp/nano.tar -f
+wget -O /tmp/nano.tar https://git.osit.cc/public-projects/zsh-und-bash-configs/raw/master/nano_syntax_highlighting.tar
+tar -xf /tmp/nano.tar -C /root
+tar -xf /tmp/nano.tar -C /etc/skel
+rm /tmp/nano.tar -f
 
 
 # optional - komplette Kommunikationssuite Kontact, inkl. alle Plugins und Erweiterungen
