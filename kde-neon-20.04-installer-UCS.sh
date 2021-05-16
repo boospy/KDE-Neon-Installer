@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #
-# (c) Mario Loderer, Mindguide
-# mario@mindguide.cc
+# (c) Mario Loderer, Bodyguide
+# mario@bodyguide.at
 #
 
 # update
