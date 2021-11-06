@@ -48,7 +48,7 @@ cp /usr/share/doc/avahi-daemon/examples/s* /etc/avahi/services/.
 systemctl restart avahi-daemon.service
 
 # ITEAS Mitarbeiter 
-apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom remmina remmina-plugin-rdp pwgen konversation ldap-utils speedtest-cli x2goclient filezilla filezilla-theme-papirus nmapsi4 proxmox-spice-remoteviewer realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de qfinderpro preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark master-pdf-editor kdenetwork-filesharing gtkterm samba librecad xca libpam-mount davfs2 keyutils gnome-disk-utility gnome-disk-utility gnome-disk-utility draw.io tinyotp -y
+apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom remmina remmina-plugin-rdp pwgen konversation ldap-utils speedtest-cli x2goclient filezilla filezilla-theme-papirus nmapsi4 proxmox-spice-remoteviewer realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark master-pdf-editor kdenetwork-filesharing gtkterm samba librecad xca libpam-mount davfs2 keyutils gnome-disk-utility draw.io tinyotp -y
 
 # User Profile
 #cd /root && git clone -b iteas_mitarbeiter https://git.styrion.net/iteas/KDE_Plasma5_Default_Profile.git && rm -r /etc/skel && mv KDE_Plasma5_Default_Profile /etc/skel && rm -r /etc/skel/.git
