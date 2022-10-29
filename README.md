@@ -1,7 +1,7 @@
 KDE Neon Installer
 =========================
 
-Das Script installiert nach dem Standard Setup von NEON, ausgesuchte Applikation dazu und konfiguriert das System für eine optimale Einsatzfähigkeit. Einzelne Module können einfach aus/einkommentiert werden.
+Das Script installiert nach dem Standard Setup von NEON, ausgesuchte Applikation dazu und konfiguriert das System für eine optimale Einsatzfähigkeit. Einzelne Module können von dir einfach aus/einkommentiert werden. Benutze dazu das "#" Zeichen. Have Fun!
 
 INSTALLATION
 ------------
@@ -9,9 +9,9 @@ INSTALLATION
 Folgende Befehle mit SUDO oder in einer Rootshell ausführen.
 
 ~~~
-wget https://git.osit.cc/public-projects/kde-neon-installer/raw/master/kde-neon-20.04-installer-UCS.sh
-chmod +x kde-neon-20.04-installer-UCS.sh
-./kde-neon-20.04-installer-UCS.sh
+wget https://git.osit.cc/public-projects/kde-neon-installer/raw/master/kde-neon-22.04-installer.sh
+chmod +x kde-neon-22.04-installer.sh
+./kde-neon-22.04-installer.sh
 ~~~
 
 Folgende Dinge findest du im Script:
