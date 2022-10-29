@@ -8,8 +8,16 @@
 #echo 'Acquire::http { Proxy "http://apt-cacher.osit.cc:3142"; };' | tee /etc/apt/apt.conf.d/01proxy
 rm /etc/apt/sources.list.d/preinstalled-pool.list
 
+gpg -k && gpg --no-default-keyring --keyring /usr/share/keyrings/iteas-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 2FAB19E7CCB7F415
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/iteas-keyring.gpg] http://apt.iteas.at/iteas jammy main" > /etc/apt/sources.list.d/iteas.list
+echo "deb http://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu jammy main" > /etc/apt/sources.list.d/org.kde.neon.net.launchpad.ppa.mozillateam.list
+
+apt update
+apt install ca-certificates-iteas-enterprise -y
+apt dist-upgrade -dy --allow-downgrades
+
+
 # update
-pkcon refresh
 pkcon update -y
 
 # Hinzufügen von Repositories
@@ -21,9 +29,6 @@ gpg -k
 
 echo "deb http://ppa.launchpadcontent.net/papirus/papirus/ubuntu/ jammy main" > /etc/apt/sources.list.d/papirus-ubuntu-papirus-jammy.list
 echo "deb http://ppa.launchpadcontent.net/heyarje/makemkv-beta/ubuntu/ jammy main" >  /etc/apt/sources.list.d/heyarje-ubuntu-makemkv-beta-jammy.list
-
-gpg --no-default-keyring --keyring /usr/share/keyrings/iteas-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 2FAB19E7CCB7F415
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/iteas-keyring.gpg] http://apt.iteas.at/iteas jammy main" > /etc/apt/sources.list.d/iteas.list
 
 gpg --no-default-keyring --keyring /usr/share/keyrings/muitsystem-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4E940D7FDD7FB8CC
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/muitsystem-keyring.gpg] http://liveusb.info/multisystem/depot all main" > /etc/apt/sources.list.d/multisystem.list
@@ -65,7 +70,7 @@ cp /usr/share/doc/avahi-daemon/examples/s* /etc/avahi/services/.
 systemctl restart avahi-daemon.service
 
 # ITEAS Mitarbeiter
-# apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom pwgen konversation ldap-utils speedtest-cli filezilla filezilla-theme-papirus nmapsi4 realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark master-pdf-editor kdenetwork-filesharing gtkterm samba xca libpam-mount davfs2 keyutils gnome-disk-utility draw.io tinyotp anydesk -y
+# apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom pwgen konversation ldap-utils speedtest-cli filezilla filezilla-theme-papirus nmapsi4 realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark master-pdf-editor-5 kdenetwork-filesharing gtkterm samba xca libpam-mount davfs2 keyutils gnome-disk-utility draw.io tinyotp anydesk -y
 
 # optioanl ITEAS Developer Packages
 # apt install okteta manpages-de-dev php-mbstring composer dbeaver-ce -y
@@ -108,4 +113,5 @@ apt install openshot-qt mkvtoolnix-gui makemkv-bin kdenlive -y
 
 apt remove timidity --purge -y
 apt autoremove --purge -y
+apt dist-upgrade -y
 apt-get clean
