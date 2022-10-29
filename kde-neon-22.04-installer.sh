@@ -31,7 +31,7 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/muitsystem-keyring.gpg] http
 apt update
 apt remove kwrite flatpak plasma-discover-backend-flatpak --purge -y
 
-apt install zsh ssh htop tree git kate k3b k3b-extrathemes kdf dolphin-nextcloud zsh nfs-common synaptic aspell-de hunspell-de-at mpv ca-certificates-iteas-enterprise gnupg-agent kleopatra gnome-icon-theme mlocate kdepim-addons qt5-style-kvantum-themes materia-kde yakuake papirus-folders digikam akonadi-backend-sqlite korganizer showfoto kipi-plugins kde-config-cron dolphin-plugins qreator filelight kcolorchooser soundkonverter kcalc partitionmanager kronometer kfind strawberry audacity unp plasma-theme-oxygen kubuntu-restricted-extras katomic avahi-discover simplescreenrecorder avahi-utils tellico kio-stash language-pack-gnome-de finger -y
+apt install zsh ssh htop tree git kate k3b k3b-extrathemes kdf dolphin-nextcloud zsh nfs-common synaptic aspell-de hunspell-de-at mpv ca-certificates-iteas-enterprise gnupg-agent kleopatra gnome-icon-theme mlocate kdepim-addons qt5-style-kvantum-themes materia-kde yakuake papirus-folders digikam akonadi-backend-sqlite korganizer showfoto kipi-plugins kde-config-cron dolphin-plugins qreator filelight kcolorchooser soundkonverter kcalc partitionmanager kronometer kfind strawberry audacity unp plasma-theme-oxygen kubuntu-restricted-extras katomic avahi-discover simplescreenrecorder avahi-utils tellico kio-stash language-pack-gnome-de finger onlyoffice-desktopeditors -y
 
 ubuntu-drivers autoinstall
 
