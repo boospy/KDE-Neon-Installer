@@ -85,7 +85,7 @@ rm /tmp/nano.tar -f
 
 
 # komplette Kommunikationssuite Kontact, inkl. alle Plugins und Erweiterungen
-apt install kdepim -y
+apt install accountsservice kdepim -y
 
 # optional Multimediapackages
 apt install openshot-qt mkvtoolnix-gui makemkv-bin kdenlive -y
