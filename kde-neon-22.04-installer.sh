@@ -17,6 +17,8 @@ apt-add-repository ppa:heyarje/makemkv-beta -n -y
 apt-add-repository ppa:papirus/papirus -n -y
 #add-apt-repository ppa:univention-dev/ppa -n -y
 
+gpg -k
+
 echo "deb http://ppa.launchpadcontent.net/papirus/papirus/ubuntu/ jammy main" > /etc/apt/sources.list.d/papirus-ubuntu-papirus-jammy.list
 echo "deb http://ppa.launchpadcontent.net/heyarje/makemkv-beta/ubuntu/ jammy main" >  /etc/apt/sources.list.d/heyarje-ubuntu-makemkv-beta-jammy.list
 
