@@ -59,6 +59,7 @@ echo "fs.inotify.max_user_instances = 1024"  >> /etc/sysctl.d/10-osit.conf
 echo "fs.inotify.max_user_watches = 5242880"  >> /etc/sysctl.d/10-osit.conf
 
 
+
 # Installation des UCS Clients für Kerberos/AD Anbindung an Univention Server
 #DEBIAN_FRONTEND=noninteractive apt-get install univention-domain-join krb5-auth-dialog -y
 
@@ -90,6 +91,8 @@ tar -xf /tmp/nano.tar -C /root
 tar -xf /tmp/nano.tar -C /etc/skel
 rm /tmp/nano.tar -f
 
+# zshfix für Snaps
+echo "emulate sh -c 'source /etc/profile'" >> /etc/zsh/zprofile
 
 # komplette Kommunikationssuite Kontact, inkl. alle Plugins und Erweiterungen
 apt install accountsservice kdepim -y
