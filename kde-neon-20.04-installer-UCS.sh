@@ -14,7 +14,7 @@ pkcon update -y
 apt-add-repository ppa:heyarje/makemkv-beta -n -y
 apt-add-repository ppa:papirus/papirus -n -y
 add-apt-repository ppa:univention-dev/ppa -n -y
-apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 2FAB19E7CCB7F415
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 23CAE45582EB0928
 echo "deb http://apt.iteas.at/iteas focal main" > /etc/apt/sources.list.d/iteas.list
 echo "deb http://liveusb.info/multisystem/depot all main" > /etc/apt/sources.list.d/multisystem.list
 wget -q http://liveusb.info/multisystem/depot/multisystem.asc -O- | apt-key add -
