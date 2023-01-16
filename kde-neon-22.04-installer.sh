@@ -10,7 +10,6 @@ rm /etc/apt/sources.list.d/preinstalled-pool.list
 
 gpg -k && gpg --no-default-keyring --keyring /usr/share/keyrings/iteas-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 23CAE45582EB0928
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/iteas-keyring.gpg] http://apt.iteas.at/iteas jammy main" > /etc/apt/sources.list.d/iteas.list
-echo "deb http://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu jammy main" > /etc/apt/sources.list.d/org.kde.neon.net.launchpad.ppa.mozillateam.list
 
 apt update
 apt install ca-certificates-iteas-enterprise -y
