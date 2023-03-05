@@ -5,7 +5,7 @@
 # linux@osit.cc
 #
 
-#echo 'Acquire::http { Proxy "http://apt-cacher.osit.cc:3142"; };' | tee /etc/apt/apt.conf.d/01proxy
+# echo 'Acquire::http { Proxy "http://apt-cacher.osit.cc:3142"; };' | tee /etc/apt/apt.conf.d/01proxy
 rm /etc/apt/sources.list.d/preinstalled-pool.list
 
 gpg -k && gpg --no-default-keyring --keyring /usr/share/keyrings/iteas-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 23CAE45582EB0928
@@ -13,7 +13,7 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/iteas-keyring.gpg] http://ap
 
 apt update
 apt install ca-certificates-iteas-enterprise -y
-apt dist-upgrade -dy --allow-downgrades
+apt dist-upgrade -dy
 
 
 # update
@@ -22,6 +22,9 @@ pkcon update -y
 # Hinzufügen von Repositories
 apt-add-repository ppa:heyarje/makemkv-beta -n -y
 apt-add-repository ppa:papirus/papirus -n -y
+
+
+# UCS Univention Domänenanbindung
 #add-apt-repository ppa:univention-dev/ppa -n -y
 
 gpg -k
@@ -35,21 +38,25 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/muitsystem-keyring.gpg] http
 apt update
 apt remove kwrite flatpak plasma-discover-backend-flatpak --purge -y
 
-apt install zsh ssh htop tree git kate k3b k3b-extrathemes kdf dolphin-nextcloud zsh nfs-common synaptic aspell-de hunspell-de-at mpv ca-certificates-iteas-enterprise gnupg-agent kleopatra gnome-icon-theme mlocate kdepim-addons qt5-style-kvantum-themes materia-kde yakuake papirus-folders digikam akonadi-backend-sqlite korganizer showfoto kipi-plugins kde-config-cron dolphin-plugins qreator filelight kcolorchooser soundkonverter kcalc partitionmanager kronometer kfind strawberry audacity unp plasma-theme-oxygen kubuntu-restricted-extras katomic avahi-discover simplescreenrecorder avahi-utils tellico kio-stash language-pack-gnome-de finger onlyoffice-desktopeditors -y
+apt install zsh ssh htop tree git kate kdf dolphin-nextcloud zsh nfs-common synaptic aspell-de hunspell-de-at mpv gnupg-agent kleopatra gnome-icon-theme mlocate kdepim-addons qt5-style-kvantum-themes materia-kde papirus-folders digikam akonadi-backend-sqlite korganizer showfoto kipi-plugins kde-config-cron dolphin-plugins filelight kcolorchooser soundkonverter kcalc partitionmanager kronometer kfind strawberry audacity unp kubuntu-restricted-extras katomic simplescreenrecorder avahi-utils tellico kio-stash language-pack-gnome-de finger onlyoffice-desktopeditors master-pdf-editor-5 gnome-disk-utility anydesk -y
 
-ubuntu-drivers autoinstall
+
+# CD Brennen
+# apt install k3b k3b-extrathemes -y
+
+ubuntu-drivers install
 
 # Google Chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-dpkg -i google-chrome-stable_current_amd64.deb
-apt install -fy
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#dpkg -i google-chrome-stable_current_amd64.deb
+#apt install -fy
 
 # Brave Secure Browser (Installation nur ohne Apt-Proxy möglich)
-# apt install curl -y
-# curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-# echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"| tee /etc/apt/sources.list.d/brave-browser-release.list
-# apt update
-# apt install brave-browser -y
+apt install curl -y
+curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] http://brave-browser-apt-release.s3.brave.com/ stable main"| tee /etc/apt/sources.list.d/brave-browser-release.list
+apt update
+apt install brave-browser -y
 
 
 # Anpassen der viel zu niedrigen Werte in Sysctl
@@ -70,7 +77,7 @@ cp /usr/share/doc/avahi-daemon/examples/s* /etc/avahi/services/.
 systemctl restart avahi-daemon.service
 
 # ITEAS Mitarbeiter
-# apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom pwgen konversation ldap-utils speedtest-cli filezilla filezilla-theme-papirus nmapsi4 realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark master-pdf-editor-5 kdenetwork-filesharing gtkterm samba xca libpam-mount davfs2 keyutils gnome-disk-utility draw.io tinyotp anydesk -y
+# apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom pwgen konversation ldap-utils speedtest-cli filezilla filezilla-theme-papirus nmapsi4 realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark kdenetwork-filesharing gtkterm samba xca libpam-mount davfs2 keyutils draw.io tinyotp -y
 
 # optioanl ITEAS Developer Packages
 # apt install okteta manpages-de-dev php-mbstring composer dbeaver-ce -y
@@ -99,7 +106,7 @@ apt install accountsservice kdepim -y
 # optional Multimediapackages
 apt install openshot-qt mkvtoolnix-gui makemkv-bin kdenlive -y
 
-# Teamviewer
+# Teamviewer... Anydesk ist schon installiert
 # wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 # dpkg -i teamviewer_amd64.deb && apt install -fy
 
