@@ -32,9 +32,6 @@ gpg -k
 echo "deb http://ppa.launchpadcontent.net/papirus/papirus/ubuntu/ jammy main" > /etc/apt/sources.list.d/papirus-ubuntu-papirus-jammy.list
 echo "deb http://ppa.launchpadcontent.net/heyarje/makemkv-beta/ubuntu/ jammy main" >  /etc/apt/sources.list.d/heyarje-ubuntu-makemkv-beta-jammy.list
 
-gpg --no-default-keyring --keyring /usr/share/keyrings/muitsystem-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4E940D7FDD7FB8CC
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/muitsystem-keyring.gpg] http://liveusb.info/multisystem/depot all main" > /etc/apt/sources.list.d/multisystem.list
-
 apt update
 apt remove kwrite flatpak plasma-discover-backend-flatpak --purge -y
 
@@ -77,7 +74,7 @@ cp /usr/share/doc/avahi-daemon/examples/s* /etc/avahi/services/.
 systemctl restart avahi-daemon.service
 
 # ITEAS Mitarbeiter
-# apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom pwgen konversation ldap-utils speedtest-cli filezilla filezilla-theme-papirus nmapsi4 realvnc-vnc-viewer smb4k mactelnet-client multisystem usb-creator-kde manpages-de preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark kdenetwork-filesharing gtkterm samba xca libpam-mount davfs2 keyutils draw.io tinyotp -y
+# apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom pwgen konversation ldap-utils speedtest-cli filezilla filezilla-theme-papirus nmapsi4 realvnc-vnc-viewer smb4k mactelnet-client usb-creator-kde manpages-de preload krename kopano-deskapp kopano-deskapp-kdeintegration kompare wireshark kdenetwork-filesharing gtkterm samba xca libpam-mount davfs2 keyutils draw.io tinyotp -y
 
 # optioanl ITEAS Developer Packages
 # apt install okteta manpages-de-dev php-mbstring composer dbeaver-ce -y
