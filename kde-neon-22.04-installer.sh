@@ -122,6 +122,8 @@ echo "emulate sh -c 'source /etc/profile'" >> /etc/zsh/zprofile
 # optional Virtualbox LTS Version
 #apt install virtualbox virtualbox-ext-pack virtualbox-guest-additions-iso -y
 
+# Messenger Microsoft Teams, Telegram, Signal
+#snap install teams-for-linux signal-desktop telegram-desktop
 
 # Puppetanbindung bei Firma ITEAS IT Services Gmbh.
 #cd /root
