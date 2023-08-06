@@ -1,6 +1,9 @@
 KDE Neon Installer
 =========================
 
+<img src="https://git.osit.cc/public-projects/kde-neon-installer/-/raw/master/Logo-KDE-Neon.png" width="" height="128">
+
+
 Das Script installiert nach dem Standard Setup von NEON, ausgesuchte Applikation dazu und konfiguriert das System für eine optimale Einsatzfähigkeit. Einzelne Module können von dir einfach aus/einkommentiert werden. Benutze dazu das "#" Zeichen. Have Fun!
 
 INSTALLATION
