@@ -80,7 +80,7 @@ systemctl restart avahi-daemon.service
 
 # ITEAS Mitarbeiter
 # ITEAS Employees
-#apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom pwgen konversation ldap-utils speedtest-cli filezilla filezilla-theme-papirus nmapsi4 realvnc-vnc-viewer smb4k mactelnet-client usb-creator-kde manpages-de preload krename kompare wireshark kdenetwork-filesharing gtkterm samba xca libpam-mount davfs2 keyutils draw.io tinyotp -y
+#apt install nload openfortigui openfortigui-runner virt-viewer hpmyroom pwgen konversation ldap-utils speedtest-cli filezilla filezilla-theme-papirus nmapsi4 realvnc-vnc-viewer smb4k mactelnet-client usb-creator-kde manpages-de preload krename kompare wireshark kdenetwork-filesharing gtkterm samba xca libpam-mount davfs2 keyutils draw.io tinyotp-qt6 -y
 
 # optional ITEAS Developer Packages
 #apt install okteta manpages-de-dev php-mbstring composer dbeaver-ce -y
