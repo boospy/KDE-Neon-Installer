@@ -92,8 +92,8 @@ mkdir /usr/share/fonts/truetype/nerdfont && cd /usr/share/fonts/truetype/nerdfon
 wget -O /tmp/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf https://github.com/boospy/ZSH-und-BASH-Configs/raw/master/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf
 mv /tmp/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf /usr/share/fonts/truetype/nerdfont/Sauce_Code_Pro_Nerd_Font_Complete_Mono.ttf
 fc-cache -fv
-wget -O /root/.zshrc https://raw.githubusercontent.com/boospy/KDE-Neon-Installer/master/zshrc
-wget -O /etc/skel/.zshrc https://raw.githubusercontent.com/boospy/KDE-Neon-Installer/master/zshrc
+wget -O /root/.zshrc https://git.osit.cc/public-projects/zsh-und-bash-configs/raw/master/zshrc-rootV3
+wget -O /etc/skel/.zshrc https://git.osit.cc/public-projects/zsh-und-bash-configs/raw/master/zshrc-userV3
 usermod -s /bin/zsh root
 wget -O /tmp/nano.tar https://github.com/boospy/ZSH-und-BASH-Configs/raw/master/nano_syntax_highlighting.tar
 tar -xf /tmp/nano.tar -C /root
