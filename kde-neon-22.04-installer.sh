@@ -37,7 +37,7 @@ echo "deb http://ppa.launchpadcontent.net/heyarje/makemkv-beta/ubuntu/ jammy mai
 apt update
 apt remove kwrite flatpak plasma-discover-backend-flatpak --purge -y
 
-apt install zsh ssh htop tree git kate kdf dolphin-nextcloud zsh nfs-common synaptic aspell-de hunspell-de-at mpv gnupg-agent kleopatra gnome-icon-theme mlocate kdepim-addons qt5-style-kvantum-themes materia-kde papirus-folders digikam akonadi-backend-sqlite korganizer showfoto kipi-plugins kde-config-cron dolphin-plugins filelight kcolorchooser soundkonverter kcalc partitionmanager kronometer kfind strawberry audacity unp kubuntu-restricted-extras katomic simplescreenrecorder avahi-utils tellico kio-stash language-pack-gnome-de finger onlyoffice-desktopeditors master-pdf-editor-5 gnome-disk-utility rustdesk bitwarden -y
+apt install zsh ssh htop tree git kate kdf dolphin-nextcloud zsh nfs-common synaptic aspell-de hunspell-de-at mpv gnupg-agent kleopatra gnome-icon-theme mlocate kdepim-addons qt5-style-kvantum-themes materia-kde papirus-folders digikam akonadi-backend-sqlite korganizer showfoto kipi-plugins kde-config-cron dolphin-plugins filelight kcolorchooser soundkonverter kcalc partitionmanager kronometer kfind strawberry audacity unp kubuntu-restricted-extras katomic simplescreenrecorder avahi-utils tellico kio-stash language-pack-gnome-de finger onlyoffice-desktopeditors master-pdf-editor-5 gnome-disk-utility rustdesk bitwarden plasma-discover-backend-snap -y
 
 
 # CD Brennen
@@ -130,6 +130,11 @@ echo "emulate sh -c 'source /etc/profile'" >> /etc/zsh/zprofile
 
 # optional Virtualbox LTS Version
 #apt install virtualbox virtualbox-ext-pack virtualbox-guest-additions-iso -y
+
+# optional Virtualbox 7
+#wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor
+#echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian jammy contrib" > /etc/apt/sources.list.d/virtualbox.list
+#apt install virtualbox-7.0 -y
 
 # Messenger Microsoft Teams, Telegram, Signal
 #snap install teams-for-linux signal-desktop telegram-desktop
