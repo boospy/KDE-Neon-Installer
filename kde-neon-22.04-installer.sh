@@ -136,8 +136,18 @@ echo "emulate sh -c 'source /etc/profile'" >> /etc/zsh/zprofile
 #echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian jammy contrib" > /etc/apt/sources.list.d/virtualbox.list
 #apt install virtualbox-7.0 -y
 
-# Messenger Microsoft Teams, Telegram, Signal
-#snap install teams-for-linux signal-desktop telegram-desktop
+# Messenger Microsoft Teams, Telegram, Signal, Zoom...
+#snap install telegram-desktop zoom-client
+
+# Install Microsoft Teams via deb package
+#apt install teams-for-linux -y
+
+# Install Signal via deb package
+#wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+#cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+#echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | tee /etc/apt/sources.list.d/signal-xenial.list
+#apt update
+#apt install signal-desktop -y
 
 # Puppetanbindung bei Firma ITEAS IT Services Gmbh.
 #cd /root
